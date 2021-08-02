@@ -52,7 +52,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 BOARD_DTBTOOL_ARGS := -2
 TARGET_KERNEL_ARCH := arm
 # LZMA_RAMDISK_TARGETS := [boot,recovery]
-TARGET_KERNEL_SOURCE := kernel/pantech/msm8x74
+TARGET_KERNEL_SOURCE := kernel/pantech/msm8974
 
 # Fixes Wifi-Mobile Data toggle issue
 MALLOC_SVELTE := true
@@ -161,6 +161,8 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
+#include $(COMMON_PATH)/sepolicy/sepolicy.mk
+
 
 BOARD_SEPOLICY_DIRS += \
     $(COMMON_PATH)/sepolicy
