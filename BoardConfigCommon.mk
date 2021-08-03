@@ -160,7 +160,8 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
+# temporary disabled until build success
+#include device/qcom/sepolicy-legacy/sepolicy.mk
 #include $(COMMON_PATH)/sepolicy/sepolicy.mk
 
 
