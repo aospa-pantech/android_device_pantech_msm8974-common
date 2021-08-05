@@ -161,8 +161,8 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
 # temporary disabled until build success
-#include device/qcom/sepolicy-legacy/sepolicy.mk
-#include $(COMMON_PATH)/sepolicy/sepolicy.mk
+# include device/qcom/sepolicy-legacy/sepolicy.mk
+# include $(COMMON_PATH)/sepolicy/sepolicy.mk
 
 
 BOARD_SEPOLICY_DIRS += \
