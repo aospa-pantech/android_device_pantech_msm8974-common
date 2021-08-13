@@ -116,8 +116,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    camera.device@1.0-impl \
+    android.hardware.camera.provider@2.4-impl-legacy \
+    camera.device@1.0-impl-legacy \
     Snap \
     camera.msm8974 \
     libshim_atomic \
@@ -271,21 +271,26 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl
 
-# WiFi HAL
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
-    dhcpcd.conf \
-    libwpa_client \
-    p2p_supplicant_overlay.conf \
-    conn_init \
-    wcnss_service \
-    wificond
-
-# WiFi Configs
-PRODUCT_COPY_FILES += \
+# WiFi
+# PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv.bin
+
+# PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service.legacy \
+    dhcpcd.conf \
+    libwpa_client \
+    hostapd \
+    wpa_supplicant \
+    wpa_supplicant.conf \
+    wpa_supplicant_overlay.conf \
+    p2p_supplicant_overlay.conf \
+    conn_init
+
+# PRODUCT_PACKAGES += \
+    wcnss_service \
+    wificond
 
 # Call the proprietary setup
 $(call inherit-product-if-exists, vendor/pantech/msm8974-common/msm8974-common-vendor.mk)
