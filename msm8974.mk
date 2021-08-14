@@ -281,7 +281,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service.legacy \
+    android.hardware.wifi@1.0-service.hidl \
     dhcpcd.conf \
     libwpa_client \
     hostapd \
@@ -289,7 +289,9 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     wpa_supplicant_overlay.conf \
     p2p_supplicant_overlay.conf \
-    conn_init
+    conn_init \
+    libnetcmdiface \
+    macloader
 
 PRODUCT_PACKAGES += \
     wcnss_service \
