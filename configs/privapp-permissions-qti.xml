@@ -3,4 +3,9 @@
     <privapp-permissions package="com.qualcomm.qcrilmsgtunnel">
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
+
+    <privapp-permissions package="org.codeaurora.gallery">
+        <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
+    </privapp-permissions>
+
 </permissions>
