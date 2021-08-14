@@ -72,6 +72,9 @@ debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
 debug.stagefright.ccodec=0
 
+# ParanoidDoze
+ro.sensor.proximity=true
+
 # QMI
 persist.data.qmi.adb_logmask=0
 

@@ -223,6 +223,10 @@ PRODUCT_PACKAGES += \
     libnl_2 \
     libtinyxml
 
+# ParanoidDoze
+PRODUCT_PACKAGES += \
+    ParanoidDoze
+
 # RIL
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
